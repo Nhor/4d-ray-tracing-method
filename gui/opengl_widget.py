@@ -25,7 +25,6 @@ class OpenGLWidget(QOpenGLWidget):
         super(OpenGLWidget, self).__init__(*args, **kwargs)
         self._room = self.parent().room   # assign room geometry to a variable
         self.setGeometry(self.parent()._width * .25, 0, self.parent()._width, self.parent()._height)   # window size/pos
-        self.initializeGL()   # initialize OpenGL
         self._timer = QBasicTimer()   # create a timer
 
     def initializeGL(self):
